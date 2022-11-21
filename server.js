@@ -21,10 +21,10 @@ app.use(express.static(path.join(__dirname, '/public')))
 // app.use('/js', express.static(path.join(__dirname, 'public/index.js')))
 // app.use('/styles', express.static(path.join(__dirname, 'public/index.css')))
 
-app.get('/', (req, res) => {
-    rollbar.log('HTML page loaded successfully')
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-})
+// app.get('/', (req, res) => {
+//     rollbar.log('HTML page loaded successfully')
+//     res.sendFile(path.join(__dirname, '/public/index.html'))
+// })
 
 // app.get('/styles', (req, res) => {
 //     res.sendFile(path.join(__dirname, '/public/index.css'))
