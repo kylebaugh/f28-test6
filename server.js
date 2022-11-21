@@ -1,11 +1,9 @@
 const express = require('express')
-// const cors = require('cors')
 const app = express()
 const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
-// app.use(cors())
 
 // include and initialize the rollbar library with your access token
 var Rollbar = require('rollbar')
@@ -97,6 +95,8 @@ app.use(express.static(`${__dirname}/public`))
 //     }
 // })
 
-app.listen(4000, () => {
-  console.log(`Listening on port 4000`)
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
 })
